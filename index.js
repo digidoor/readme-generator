@@ -13,7 +13,7 @@ const questions = [
 	{
 		type: 'input',
 		message: 'What\'s up?',
-		name: 'var2'
+		name: 'license'
 	},
 	{
 		type: 'input',
@@ -30,20 +30,14 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data)
 {
-	var gen = `This is a test:
-	${data.projectName}
-	
-	${data.var2}
-	${data.var3}
-	${data.left}`
-	return writeFile(fileName, gen);
+	return writeFile(fileName, data);
 }
 
 // TODO: Create a function to initialize app
 function init()
 {
 	inquirer.prompt(questions)
-		.then( responses => writeToFile("README.out", responses) )
+		.then( responses => writeToFile("README.out", generateMarkdown(responses)))
 		.then( () => console.log("Successfully wrote ReadMe file") )
 		.catch( err => console.error(err) );
 }
