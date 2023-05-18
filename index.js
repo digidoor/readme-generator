@@ -12,18 +12,23 @@ const questions = [
 	},
 	{
 		type: 'input',
-		message: 'What\'s up?',
+		message: 'What license does it use?',
 		name: 'license'
 	},
 	{
 		type: 'input',
-		message: 'whats down?',
-		name: 'var3'
+		message: 'Describe the project.',
+		name: 'desc'
 	},
 	{
 		type: 'input',
-		message: 'whats left',
-		name: 'left'
+		message: 'How do you install the dependencies?',
+		name: 'install'
+	},
+	{
+		type: 'input',
+		message: 'Describe the usage of the program.',
+		name: 'usage'
 	}
 ];
 
@@ -37,7 +42,7 @@ function writeToFile(fileName, data)
 function init()
 {
 	inquirer.prompt(questions)
-		.then( responses => writeToFile("README.out", generateMarkdown(responses)))
+		.then( responses => writeToFile("README.md", generateMarkdown(responses)))
 		.then( () => console.log("Successfully wrote ReadMe file") )
 		.catch( err => console.error(err) );
 }
