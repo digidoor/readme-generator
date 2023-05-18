@@ -19,7 +19,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
 	return `# ${data.title}
 
-${renderLicenseBandge(data.license)}
+${renderLicenseBadge(data.license)}
 
 `;
 }
