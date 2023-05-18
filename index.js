@@ -42,7 +42,7 @@ function writeToFile(fileName, data)
 function init()
 {
 	inquirer.prompt(questions)
-		.then( responses => writeToFile("README.md", responses) )
+		.then( responses => writeToFile("README.out", responses) )
 		.then( () => console.log("Successfully wrote ReadMe file") )
 		.catch( err => console.error(err) );
 }
