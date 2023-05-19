@@ -23,8 +23,16 @@ function renderLicenseSection(license)
 	if(license != "None")
 		return `## License
 
-This project is licensed under the ${license}.`;
+This project is licensed under the ${license} license.`;
 	return "";
+}
+
+function screenShotSection( isScreen, screenName )
+{
+	if(!isScreen)
+		return "";
+	return `## Here's what it looks like:
+![screenshot](${screenName}?raw=true "demo")`
 }
 
 // TODO: Create a function to generate markdown for README
@@ -34,6 +42,8 @@ function generateMarkdown(data) {
 ${data.desc}
 
 [license info](#license)
+
+${screenShotSection( data.screenshot, data.screenfile )}
 ## Installation
 To install dependencies, run the following:
 \`\`\`bash

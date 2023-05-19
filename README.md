@@ -1,17 +1,23 @@
-# Simple Readme Generator
+# Simple README Generator
 ## Description
-Using node, this project generates a README from a series of prompts.
+A simple way to generate README markdown files using the command line and node.
+
 [license info](#license)
-# Installation
+
+## Here's what it looks like:
+![screenshot](readme-gen.png?raw=true "demo")
+## Installation
 To install dependencies, run the following:
 ```bash
 npm i
 ```
 ## Usage
-Simply run `node index.js` in the root directory and answer the prompts.
+Run `node index.js` in the root directory of the project.
 ## Questions or Comments?
-Simply open an issue in this repo. Find me at [digidoor](https://github.com/digidoor/).
+Simply open an issue in this repo.
+Find me at [digidoor](https://github.com/digidoor/).
 ## License
 
-This project is licensed under the MIT.
+This project is licensed under the MIT license.
+
 ![code license](https://img.shields.io/badge/license-MIT-blue.svg)

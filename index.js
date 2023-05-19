@@ -37,6 +37,17 @@ const questions = [
 		message: 'Who is the author? (What\'s your github handle?)',
 		name: 'github',
 	},
+	{
+		type: 'confirm',
+		message: 'Would you like to include a screenshot in the README?',
+		name: 'screenshot',
+	},
+	{
+		type: 'input',
+		message: 'Screenshot filename?',
+		name: 'screenfile',
+		when: function( responses ) { return responses.screenshot === true; },
+	},
 ];
 
 // TODO: Create a function to write README file
@@ -49,7 +60,7 @@ function writeToFile(fileName, data)
 function init()
 {
 	inquirer.prompt(questions)
-		.then( responses => writeToFile("README.md", generateMarkdown(responses)))
+		.then( responses => writeToFile("README.out", generateMarkdown(responses)))
 		.then( () => console.log("Successfully wrote ReadMe file") )
 		.catch( err => console.error(err) );
 }
