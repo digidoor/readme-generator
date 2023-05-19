@@ -8,28 +8,35 @@ const questions = [
 	{
 		type: 'input',
 		message: 'What is the name of the project?',
-		name: 'projectName'
+		name: 'projectName',
 	},
 	{
-		type: 'input',
+		type: 'list',
 		message: 'What license does it use?',
-		name: 'license'
+		choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+		name: 'license',
 	},
 	{
 		type: 'input',
-		message: 'Describe the project.',
-		name: 'desc'
+		message: 'Describe the project concept.',
+		name: 'desc',
 	},
 	{
 		type: 'input',
 		message: 'How do you install the dependencies?',
-		name: 'install'
+		default: 'npm i',
+		name: 'install',
 	},
 	{
 		type: 'input',
 		message: 'Describe the usage of the program.',
-		name: 'usage'
-	}
+		name: 'usage',
+	},
+	{
+		type: 'input',
+		message: 'Who is the author? (What\'s your github handle?)',
+		name: 'github',
+	},
 ];
 
 // TODO: Create a function to write README file

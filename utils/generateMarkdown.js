@@ -12,7 +12,7 @@ function renderLicenseBadge(license)
 function renderLicenseLink(license)
 {
 	if(license != "None")
-		return `\n* [code license](#${license})\n`;
+		return `\n* [license](#license)\n`;
 	return "";
 }
 
@@ -30,70 +30,23 @@ This project is licensed under the ${license}.`;
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 	return `# ${data.projectName}
-
 ## Description
-
 ${data.desc}
 
-* [Installation](#installation)
-
+[license info](#license)
+## Installation
 To install dependencies, run the following:
-
 \`\`\`bash
 ${data.install}
 \`\`\`
-
 ## Usage
-
 ${data.usage}
+## Questions or Comments?
+Simply open an issue in this repo.
+Find me at [${data.github}](https://github.com/${data.github}/).
+${renderLicenseSection(data.license)}
 
 ${renderLicenseBadge(data.license)}
-
-[test](#test)
-[test](#Test)
-[Test](#test)
-[Test](#Test)
-
-		AUUUUUGH
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[]: # (extra space for testing)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Test
-
 `;
 }
 
