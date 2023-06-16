@@ -6,7 +6,7 @@ A simple way to generate README markdown files using the command line and node.
 
 ## Here's what it looks like:
 ![screenshot](readme-gen.png?raw=true "demo")
-https://drive.google.com/file/d/1LNxA4j16J86EzwdKGVAlpOSh8uNIVxsL/view
+
 ## Installation
 To install dependencies, run the following:
 ```bash
